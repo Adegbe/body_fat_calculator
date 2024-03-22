@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="UTF-8" />
+  <head>
+    <title>Body Fat Result</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <div>
+      <h1>Body Fat Result</h1>
+      <p>Age: {{ age }}</p>
+      <p>Nationality: {{ nationality }}</p>
+      <p>Gender: {{ gender }}</p>
+      <p>Your Estimated Body Fat Percentage is: {{ body_fat|round(2) }}%</p>
+      <a href="/bodyfat">Calculate another Body Fat</a>
+    </div>
+  </body>
+</html>

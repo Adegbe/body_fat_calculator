@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+<head>
+    <title>Body Fat Calculator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    
+    <form action="/bodyfat" method="post">
+        <h1>Body Fat Percentage Calculator</h1>
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select><br><br>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required><br><br>
+
+        <label for="height">Height (in cm):</label>
+        <input type="number" id="height" name="height" required><br><br>
+
+        <label for="weight">Weight (in kg):</label>
+        <input type="number" id="weight" name="weight" required><br><br>
+
+        <label for="nationality">Nationality:</label>
+        <input type="text" id="nationality" name="nationality" required><br><br>
+
+        <!-- Male measurements -->
+        <label for="abdomen">Abdomen Circumference (in cm):</label>
+        <input type="number" id="abdomen" name="abdomen"><br><br>
+
+        <!-- Common measurement -->
+        <label for="neck">Neck Circumference (in cm):</label>
+        <input type="number" id="neck" name="neck" required><br><br>
+
+        <!-- Female measurements -->
+        <label for="waist">Waist Circumference (in cm):</label>
+        <input type="number" id="waist" name="waist"><br><br>
+
+        <label for="hip">Hip Circumference (in cm):</label>
+        <input type="number" id="hip" name="hip"><br><br>
+
+        <input type="submit" value="Calculate Body Fat">
+    </form>
+</body>
+</html>
